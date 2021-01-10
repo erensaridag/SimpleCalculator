@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="ENTER NUMBER 1"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/number2_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="ENTER NUMBER 2"
+        android:inputType="number|textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/number1_txt"
+        app:layout_constraintTop_toBottomOf="@+id/number1_txt" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="492dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="63dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2_txt">
+
+        <Button
+            android:id="@+id/btn_toplama"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:fontFamily="sans-serif-black"
+            android:onClick="toplama"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btn_cikarma"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:fontFamily="sans-serif-black"
+            android:onClick="cikarma"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btn_carpma"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:fontFamily="sans-serif-black"
+            android:onClick="carpma"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btn_bolme"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:fontFamily="sans-serif-black"
+            android:onClick="bolme"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="224dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="190dp"
+        android:fontFamily="sans-serif-black"
+        android:text="RESULT : 0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
